@@ -1,19 +1,19 @@
 public class SecondMinuteChallenge {
-    public static String getDurationString(int minutes, int seconds){
+    public static String getDurationString(long minutes, long seconds){
         if((minutes >=0) && (seconds >= 0 && seconds <= 59)){
             return ("Invalid Value");
         }else {
-            int totalSeconds = minutes * 60;
+            long totalSeconds = minutes * 60;
             totalSeconds += seconds;
-            int hours = totalSeconds / 3600;
-            int mins = totalSeconds % 60;
-            int secs = mins % 3600;
+            long hours = totalSeconds / 3600;
+            long mins = totalSeconds % 60;
+            long secs = mins % 3600;
             return (hours +"h "+mins+"m "+secs+"s");
         }
     }
-    public static String getDurationString(int seconds){
+    public static String getDurationString(long seconds){
         if(seconds >= 0) {
-            int mins = seconds / 60;
+            long mins = seconds / 60;
             return getDurationString(mins, seconds);
         }
         else {
