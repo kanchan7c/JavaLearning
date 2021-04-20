@@ -1,6 +1,6 @@
 public class SecondMinuteChallenge {
     public static String getDurationString(long minutes, long seconds){
-        if((minutes >=0) && (seconds >= 0 && seconds <= 59)){
+        if((minutes < 0) || (seconds < 0 || seconds > 59)){
             return ("Invalid Value");
         }else {
             long totalSeconds = minutes * 60;
@@ -12,7 +12,7 @@ public class SecondMinuteChallenge {
         }
     }
     public static String getDurationString(long seconds){
-        if(seconds >= 0) {
+        if(seconds > 0) {
             long mins = seconds / 60;
             return getDurationString(mins, seconds);
         }
@@ -21,7 +21,7 @@ public class SecondMinuteChallenge {
         }
     }
     public static void main(String[] args) {
-        System.out.println(getDurationString(61,60));
-        System.out.println(getDurationString(60));
+        System.out.println(getDurationString(65,45));
+        System.out.println(getDurationString(50));
     }
 }
