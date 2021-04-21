@@ -21,6 +21,8 @@ public class dayOfTheweek {
     }
 
     public static void main(String[] args) {
-        printDayOfTheWeek(10);
+        for(int i=1; i<=7;i++) {
+            printDayOfTheWeek(i);
+        }
     }
 }
